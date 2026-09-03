@@ -40,41 +40,30 @@ Our goal is simple:
 
 ---
 
-## 🚀 Featured Projects
-
-### 🕵️ Detective Files
+🚀 Featured Projects
+🕵️ Detective Files
 
 A mystery investigation game built around an interactive police operating system, case management, investigation tools, and narrative-driven gameplay.
 
-<p>
-  <a href="https://detective-file.jollypanda.ir">
-    <img src="https://img.shields.io/badge/PLAY%20PROJECT-ff914d?style=for-the-badge&logo=googlechrome&logoColor=white" />
-  </a>
-</p>
+Status: 🧪 In Testing — Not Final
 
----
+<p> <a href="https://detective.jollypanda.ir/"> <img src="https://img.shields.io/badge/OPEN%20PROJECT-ff914d?style=for-the-badge&logo=googlechrome&logoColor=white" /> </a> </p>
 
-### 🃏 Wild Guest List
+🃏 Wild Guest List
 
 A browser-based card game focused on strategic gameplay, card interactions, and multiplayer-style systems.
 
-<p>
-  <a href="https://wgl.jollypanda.ir">
-    <img src="https://img.shields.io/badge/PLAY%20PROJECT-ff914d?style=for-the-badge&logo=googlechrome&logoColor=white" />
-  </a>
-</p>
+Status: 🔄 v1 Released — v2 In Development
 
----
+<p> <a href="https://wgl.jollypanda.ir"> <img src="https://img.shields.io/badge/PLAY%20PROJECT-ff914d?style=for-the-badge&logo=googlechrome&logoColor=white" /> </a> </p>
 
-### 🛍️ Dopamall
+🛍️ Dopamall
 
-A gamified shopping experience designed as a playful digital environment, combining interactive web design, characters, and game-like mechanics.
+A gamified shopping experience combining interactive web design, characters, and playful game-like mechanics.
 
-<p>
-  <a href="https://www.dopamall.ir">
-    <img src="https://img.shields.io/badge/VISIT%20PROJECT-ff914d?style=for-the-badge&logo=googlechrome&logoColor=white" />
-  </a>
-</p>
+Status: ✅ Released
+
+<p> <a href="https://www.dopamall.ir"> <img src="https://img.shields.io/badge/VISIT%20PROJECT-ff914d?style=for-the-badge&logo=googlechrome&logoColor=white" /> </a> </p>
 
 ---
 
