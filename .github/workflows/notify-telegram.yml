@@ -1,0 +1,47 @@
+name: Notify Telegram
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        type: string
+        required: true
+    secrets:
+      TELEGRAM_BOT_TOKEN:
+        required: true
+      TELEGRAM_CHAT_ID:
+        required: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ inputs.tag }}
+      BOT: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - name: Send Pages link
+        run: |
+          PAGES=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .html_url 2>/dev/null || true)
+          if [ -n "$PAGES" ]; then
+            curl -s "https://api.telegram.org/bot${BOT}/sendMessage" \
+              --data-urlencode "chat_id=${CHAT}" \
+              --data-urlencode "text=🌐 ${GITHUB_REPOSITORY} ${TAG}
+          ${PAGES}"
+          fi
+
+      - name: Send APK files
+        run: |
+          mkdir out
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" -p "*.apk" -D out || true
+          for f in out/*.apk; do
+            [ -e "$f" ] || continue
+            curl -s "https://api.telegram.org/bot${BOT}/sendDocument" \
+              -F chat_id="${CHAT}" \
+              -F document=@"$f" \
+              -F caption="📦 ${GITHUB_REPOSITORY} ${TAG}"
+          done
